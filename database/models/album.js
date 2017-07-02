@@ -11,6 +11,5 @@ const AlbumSchema = new Schema({
   revenue: Number
 });
 
-// don't create a model because this is a subdocument of artist
-
+// Album should be a schema, but not a model, because it's a subdocument of artist
 module.exports = AlbumSchema;

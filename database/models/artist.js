@@ -14,12 +14,9 @@ const ArtistSchema = new Schema({
   netWorth: Number,
   labelName: String,
   retired: Boolean,
-  albums: [{
-    type: Schema.Types.ObjectId,
-    ref: 'album'
-  }]
+  albums: [AlbumSchema]
 })
 
 const Artist = mongoose.model('artist', ArtistSchema);
 
-module.exports = ArtistSchema
+module.exports = Artist
